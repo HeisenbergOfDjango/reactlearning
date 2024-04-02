@@ -1,15 +1,24 @@
 
+import { useState } from 'react';
 import './App.css';
 import User from './User';
 
 function App() {
-  const demo = () => {
-    alert("message")
+
+  let [data , setData] = useState("initial value")
+
+  const update = () => {
+    setData("final value")
   }
+
+  console.log("---- render ----")
+
   return (
     <div className="App">
-      <h1> React Event handler </h1>
-      <button onClick={demo}>button</button>
+      <h1> React useState with hooks</h1>
+      <h3>{data}</h3>
+
+      <button onClick={update}>button</button>
       
     </div>
   );
