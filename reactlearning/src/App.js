@@ -4,13 +4,18 @@ import UserCard from './UserCard';
 
 function App() {
 
-  const [name, setName] = useState("intial name")
+  const [intialValue, finalValue] = useState("")
 
+  const changeHandler = (event) =>{
+    console.log(event.target.value)
+    finalValue(event.target.value)
+  }
+ 
   return (
     <div className="App">
-      <h1> React Props Example 3 </h1>
-      <UserCard name={name}/>
-      <button onClick={()=>setName("Final name")} >Update props</button>
+      <h1> React Input </h1>
+      <input type='text' onChange={changeHandler}></input>
+      <h1> {intialValue} </h1>
     </div>
   );
 }
