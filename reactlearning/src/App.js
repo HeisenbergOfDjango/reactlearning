@@ -1,5 +1,5 @@
 import './App.css';
-import Counter from './Counter';
+import UserCard from './UserCard';
 
 function App() {
 
@@ -7,8 +7,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1> React useState with hooks counter</h1>
-      <Counter/>
+      <h1> React Props </h1>
+      <UserCard name="aditya"/>
     </div>
   );
 }
