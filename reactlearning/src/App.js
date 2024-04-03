@@ -4,6 +4,8 @@ import UserCard from './UserCard';
 
 function App() {
 
+  const [showInitialvalue, hidevalue] = useState(false)
+
   const [intialValue, finalValue] = useState("")
 
   const changeHandler = (event) =>{
@@ -15,7 +17,9 @@ function App() {
     <div className="App">
       <h1> React Input </h1>
       <input type='text' onChange={changeHandler}></input>
-      <h1> {intialValue} </h1>
+      
+      <button onClick={()=>hidevalue(true)}>Value</button>
+      <h1>{showInitialvalue ? intialValue : ''}</h1>
     </div>
   );
 }
